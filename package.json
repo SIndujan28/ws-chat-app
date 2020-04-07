@@ -1,0 +1,14 @@
+{
+  "name": "websocket using ws",
+  "version": "1.0.0",
+  "description": "chat service using ws",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SINDUJAN",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^7.2.3"
+  }
+}
