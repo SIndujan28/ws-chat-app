@@ -15,3 +15,9 @@ scenarios:
         - think: 10
         - send: '["sendAll",{"name":"sindu","age":"21"}]'
         - think: 10
+        - send: '["broadcast",{"uuid":"23434eqra3431","info":{"name":"mali","age":"24"}}]'
+        - think: 10
+        - send: '["random",{"uuid":"232434ereres3","info":"unknown"}]'
+        - think: 10
+        - send: '{"event":"dispensary","info":"unknown"}'
+        - think: 10
