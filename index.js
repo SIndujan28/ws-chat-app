@@ -1,6 +1,25 @@
 const webSocket=require('ws')
 const wss=new webSocket.Server({port:8080})
 
+// wss.on('connection',(ws,req) => {
+//     ws.on('message',message => {
+//         console.log(`recieved message => ${message}`)
+//         console.log(typeof(JSON.parse(message)))
+//         let mes=JSON.parse(message)
+//         if(mes.event=="stat") {
+//             const id=setInterval(()=>{
+//                 ws.send(JSON.stringify(process.memoryUsage()))
+//                 console.log(process.memoryUsage())
+//             },100)
+//         }
+//     })
+//     ws.send('ho!')
+// })
+// wss.on('close',() => {
+//     console.log('Disconnected')
+//     clearInterval(id)
+// })
+
 wss.on('open',(ws) => {
     ws.send('Welcome to the hell\'s doom')
 })

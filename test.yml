@@ -1,0 +1,17 @@
+config:
+    target: "ws://localhost:8080"
+    phases:
+      - duration: 20
+        arrivalRate: 5
+    ws:
+      # Set a custom subprotocol:
+      subprotocols:
+        - json
+        - soap
+scenarios:
+    - engine: "ws"
+      flow:
+        - send: '["memoryUsage",{"name":"sindu"}]'
+        - think: 10
+        - send: '["sendAll",{"name":"sindu","age":"21"}]'
+        - think: 10
